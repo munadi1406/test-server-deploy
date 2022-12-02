@@ -12,6 +12,11 @@ app.get('/',(req,res)=>{
 })
 
 
+app.get('/list',(req,res)=>{
+    res.send('path /list')
+})
+
+
 
 app.listen(port,()=>{
     console.log(`server run on port ${port}`);
