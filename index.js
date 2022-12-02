@@ -1,5 +1,5 @@
 import express from 'express'
-
+import axios from 'axios'
 
 const app = express();
 
@@ -7,8 +7,11 @@ const port = 5000
 
 
 
-app.get('/',(req,res)=>{
-    res.send("path /")
+app.get('/show',(req,res)=>{
+    axios.get('https://test-server-deploy-beige.vercel.app/list')
+    .then((res)=>{
+        res.send(res);
+    })
 })
 
 
